@@ -29,18 +29,18 @@ modules:
       # - starship
       - butter
       - epson-inkjet-printer-escpr
-      - epson-injket-printer-escpr2
+      - epson-inkjet-printer-escpr2
       - fastfetch
       - fish
       - firewall-config
-      # - fprintd-clients
-      # - fprintd-clients-pam
+      - fprintd-clients
+      - fprintd-clients-pam
       - gnome-extensions-app
       - make
       - mesa-libGLU
-      - nerd-fonts
+      # - nerd-fonts
       - open-fprintd
-      # - python3-validity
+      - python3-validity
       - tmux
       - pulseaudio-utils
       - tlp
