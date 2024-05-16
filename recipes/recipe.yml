@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: pbuild
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: IDK man I just want to see how this works lol
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
@@ -15,26 +15,73 @@ modules:
       - usr: /usr # copies config/files/usr into your image's /usr.
                   # put configuration files you want in /etc/ on a booted system 
                   # in /usr/etc/ in the image. read more in files module reference.
+      - etc: /etc # This is for throttled, zcfan, and tlp configs
+                  # so they can be further edited without relying on rpm-ostree.
 
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/abn/throttled/repo/fedora-%OS_VERSION%/abn-throttled-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/zhangyuannie/butter/repo/fedora-%OS_VERSION%/zhangyuannie-butter-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/repo/fedora-%OS_VERSION%/sneexy-python-validity-fedora-%OS_VERSION%.repo
     install:
       # - micro
       # - starship
+      - butter
+      - epson-inkjet-printer-escpr
+      - epson-injket-printer-escpr2
+      - fastfetch
+	    - fish
+      - firewall-config
+      - fprintd-clients
+      - fprintd-clients-pam
+      - make
+      - mesa-libGLU
+      - nerd-fonts
+      - open-fprintd
+      - python3-validity
+      - tmux
+      - pulseaudio-utils
+      - tlp
+      - tlp-rdw
+      - throttled
+      - wl-clipboard
+      - zcfan
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-
+      - firefox
+      - firefox-langpacks
+      - fprintd
+      - fprintd-pam
+      - gnome-extensions-app
+      - gnome-software-rpm-ostree
+      - gnome-tour
+      - power-profiles-daemon
+      - thermald
+      - ublue-os-update-services
+      - yelp
+      
+  - type: systemd
+    system:
+      enabled:
+        - tlp.service
+      disabled:
+        - NetworkManager-wait-online.service
+      masked: 
+        - systemd-rfkill.service
+        - systemd-rfkill.socket
+    user:
+      enabled:
+        - throttled.service
+       
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
-      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      # repo-name: flathub
-      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (system-wide)"
       install:
         # - org.mozilla.firefox
         # - org.gnome.Loupe
@@ -42,8 +89,58 @@ modules:
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
       # Installing different branches of the same Flatpak is not supported.
-      remove:
+      - com.github.d4nj1.tlpui
+      - com.github.tchx84.Flatseal
+      - com.mattjakeman.ExtensionManager
+      - com.quexten.Goldwarden
+      - io.github.cboxdoerfer.FSearch
+      - io.github.dvlv.boxbuddyrs
+      - io.github.flattool.Warehouse
+      - io.github.nokse22.minitext
+      - io.missioncenter.MissionCenter
+      - org.chromium.Chromium
+      - org.gnome.Calendar
+      - org.gnome.Epiphany
+      - org.gnome.Evince
+      - org.gnome.Evolution
+      - org.gnome.Firmware
+      - org.gnome.Loupe
+      - org.gnome.NautilusPreviewer
+      - org.gnome.Weather
+      - org.gnome.clocks
+      - org.gnome.seahorse.Application
+      - org.mozilla.firefox
+      - re.sonny.Junction
+      # remove:
       # - org.gnome.eog
+    user:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (user)"
+      install:
+      - app.drey.Warp
+      - ca.desrt.dconf-editor
+      - com.github.johnfactotum.Foliate
+      - com.github.rafostar.Clapper
+  - type: fonts
+    fonts:
+      - Terminus
+      - JetBrainsMono
+      - NerdFontsSymbolsOnly
 
+  - type: gnome-extensions
+    install:
+      - AlphabeticalAppGridstuarthayhurst.v40
+      - appindicatorsupportrgcjonas.gmail.com.v58
+      - just-perfection-desktopjust-perfection.v28
+      - light-stylegnome-shell-extensions.gcampax.github.com.v5
+      # TBA
+      # - QSTweak
+      # - Blur my shell
+      # - Caffeine
+      # - Dash to dock
+      # - GSConnect
+      # - Logo Menu
+      
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
