@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: pbuild
 # description will be included in the image's metadata
-description: IDK man I just want to see how this works lol
+description: Personal build, created out of curiosity
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
@@ -35,6 +35,7 @@ modules:
       - firewall-config
       - fprintd-clients
       - fprintd-clients-pam
+      - gnome-extensions-app
       - make
       - mesa-libGLU
       - nerd-fonts
@@ -134,13 +135,12 @@ modules:
       - appindicatorsupportrgcjonas.gmail.com.v58
       - just-perfection-desktopjust-perfection.v28
       - light-stylegnome-shell-extensions.gcampax.github.com.v5
-      # TBA
-      # - QSTweak
-      # - Blur my shell
-      # - Caffeine
-      # - Dash to dock
-      # - GSConnect
-      # - Logo Menu
+      - quick-settings-tweaksqwreey.v27
+      - blur-my-shellaunetx.v61
+      - caffeinepatapon.info.v54
+      - dash-to-dockmicxgx.gmail.com.v92
+      - gsconnectandyholmes.github.io.v57
+      - logomenuaryan_k.v30
       
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
