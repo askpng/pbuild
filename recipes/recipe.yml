@@ -33,14 +33,14 @@ modules:
       - fastfetch
       - fish
       - firewall-config
-      - fprintd-clients
-      - fprintd-clients-pam
+      # - fprintd-clients
+      # - fprintd-clients-pam
       - gnome-extensions-app
       - make
       - mesa-libGLU
       - nerd-fonts
       - open-fprintd
-      - python3-validity
+      # - python3-validity
       - tmux
       - pulseaudio-utils
       - tlp
@@ -53,9 +53,8 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks
-      - fprintd
-      - fprintd-pam
-      - gnome-extensions-app
+      # - fprintd
+      # - fprintd-pam
       - gnome-software-rpm-ostree
       - gnome-tour
       - power-profiles-daemon
