@@ -71,9 +71,9 @@ modules:
       masked: 
         - systemd-rfkill.service
         - systemd-rfkill.socket
-    user:
-      enabled:
-        - throttled.service
+    # user:
+      # enabled:
+        # - throttled.service
        
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
