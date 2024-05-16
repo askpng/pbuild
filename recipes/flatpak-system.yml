@@ -1,29 +1,29 @@
 type: default-flatpaks
-  notify: true # Send notification after install/uninstall is finished (true/false)
-  system:
-    # If no repo information is specified, Flathub will be used by default
-    repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-    repo-name: flathub
-    repo-title: "Flathub (system-wide)"
-    install:
-      - com.github.d4nj1.tlpui
-      - com.github.tchx84.Flatseal
-      - com.mattjakeman.ExtensionManager
-      - com.quexten.Goldwarden
-      - io.github.cboxdoerfer.FSearch
-      - io.github.dvlv.boxbuddyrs
-      - io.github.flattool.Warehouse
-      - io.missioncenter.MissionCenter
-      - org.chromium.Chromium
-      - org.gnome.Calendar
-      - org.gnome.Epiphany
-      - org.gnome.Evince
-      - org.gnome.Evolution
-      - org.gnome.Firmware
-      - org.gnome.Loupe
-      - org.gnome.NautilusPreviewer
-      - org.gnome.Weather
-      - org.gnome.clocks
-      - org.gnome.seahorse.Application
-      - org.mozilla.firefox
-      - re.sonny.Junction
+notify: true # Send notification after install/uninstall is finished (true/false)
+system:
+  # If no repo information is specified, Flathub will be used by default
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  repo-name: flathub
+  repo-title: "Flathub (system-wide)"
+  install:
+    - com.github.d4nj1.tlpui
+    - com.github.tchx84.Flatseal
+    - com.mattjakeman.ExtensionManager
+    - com.quexten.Goldwarden
+    - io.github.cboxdoerfer.FSearch
+    - io.github.dvlv.boxbuddyrs
+    - io.github.flattool.Warehouse
+    - io.missioncenter.MissionCenter
+    - org.chromium.Chromium
+    - org.gnome.Calendar
+    - org.gnome.Epiphany
+    - org.gnome.Evince
+    - org.gnome.Evolution
+    - org.gnome.Firmware
+    - org.gnome.Loupe
+    - org.gnome.NautilusPreviewer
+    - org.gnome.Weather
+    - org.gnome.clocks
+    - org.gnome.seahorse.Application
+    - org.mozilla.firefox
+    - re.sonny.Junction
