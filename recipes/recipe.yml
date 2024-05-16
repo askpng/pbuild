@@ -21,23 +21,23 @@ modules:
   - type: rpm-ostree
     repos:
       install:
-      - epson-inkjet-printer-escpr
-      - epson-inkjet-printer-escpr2
-      - fastfetch
-      - fish
-      - firewall-config
-      - gnome-boxes
-      - gnome-extensions-app
-      - igt-gpu-tools
-      - make
-      - pulseaudio-utils
-      - wl-clipboard
+        - epson-inkjet-printer-escpr
+        - epson-inkjet-printer-escpr2
+        - fastfetch
+        - fish
+        - firewall-config
+        - gnome-boxes
+        - gnome-extensions-app
+        - igt-gpu-tools
+        - make
+        - pulseaudio-utils
+        - wl-clipboard
       remove:
-      - firefox
-      - firefox-langpacks
-      - gnome-software-rpm-ostree
-      - gnome-tour
-      - yelp
+        - firefox
+        - firefox-langpacks
+        - gnome-software-rpm-ostree
+        - gnome-tour
+        - yelp
       
   - type: systemd
     system:
