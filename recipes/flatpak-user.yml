@@ -1,0 +1,12 @@
+type: default-flatpaks
+  notify: true # Send notification after install/uninstall is finished (true/false)
+  user:
+    repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    repo-name: flathub
+    repo-title: "Flathub (user)"
+    install:
+      - app.drey.Warp
+      - ca.desrt.dconf-editor
+      - com.github.johnfactotum.Foliate
+      - com.github.rafostar.Clapper
+      - io.github.nokse22.minitext
