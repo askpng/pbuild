@@ -1,6 +1,5 @@
 type: rpm-ostree
-  repos:
-  # butter
+repos:
   - https://copr.fedorainfracloud.org/coprs/zhangyuannie/butter/repo/fedora-%OS_VERSION%/zhangyuannie-butter-fedora-%OS_VERSION%.repo
-  install:
+install:
   - butter
