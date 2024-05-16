@@ -31,7 +31,7 @@ modules:
       - epson-inkjet-printer-escpr
       - epson-injket-printer-escpr2
       - fastfetch
-	    - fish
+      - fish
       - firewall-config
       - fprintd-clients
       - fprintd-clients-pam
