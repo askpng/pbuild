@@ -32,7 +32,7 @@ modules:
       - make
       - pulseaudio-utils
       - wl-clipboard
-    remove:
+      remove:
       - firefox
       - firefox-langpacks
       - gnome-software-rpm-ostree
