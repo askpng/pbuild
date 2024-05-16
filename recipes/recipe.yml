@@ -50,7 +50,6 @@ modules:
       - JetBrainsMono
       - NerdFontsSymbolsOnly
 
-  modules:
     - from-file: btrfs-butter.yml
     - from-file: ptyxis.yml
     - from-file: t480s-utilities.yml
