@@ -53,8 +53,8 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks
-      # - fprintd
-      # - fprintd-pam
+      - fprintd
+      - fprintd-pam
       - gnome-software-rpm-ostree
       - gnome-tour
       - power-profiles-daemon
