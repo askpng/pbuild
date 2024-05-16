@@ -1,42 +1,51 @@
 # pbuild &nbsp; [![build-ublue](https://github.com/askpng/pbuild/actions/workflows/build.yml/badge.svg)](https://github.com/askpng/pbuild/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+I created this because I want to learn how this works and at the end of the day, I want a computer that runs itself the way I want it to, without unnecessary extras. Who knows what will come out of this. Probably nothing!
 
-After setup, it is recommended you update this README to describe your custom image.
+[BlueBuild docs](https://blue-build.org/how-to/setup/) for reference.
 
-## Installation
+## Installation (Experimental!)
 
-> **Warning**  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+Rebase guide:
 
-To rebase an existing atomic Fedora installation to the latest build:
-
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+- Rebase to the unsigned image to get the proper signing keys + policies installed and reboot:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/askpng/pbuild:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/askpng/pbuild:latest --reboot
   ```
-- Reboot to complete the rebase:
+- Rebase to the signed image and reboot:
   ```
-  systemctl reboot
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/askpng/pbuild:latest --reboot
   ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/askpng/pbuild:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
-
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
-
 ## ISO
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+ISO file for a fresh install can be generated using `docker` or `podman` from a Silverblue system.
+
+### Docker
+```
+mkdir ./iso-output
+sudo docker run --rm --privileged --volume ./iso-output:/build-container-installer/build --pull=always \
+ghcr.io/jasonn3/build-container-installer:latest \
+IMAGE_REPO=ghcr.io/octocat \
+IMAGE_NAME=weird-os \
+IMAGE_TAG=latest \
+VARIANT=Silverblue # should match the variant your image is based on
+```
+### Podman
+```
+mkdir ./iso-output
+sudo podman run --rm --privileged --volume ./iso-output:/build-container-installer/build --security-opt label=disable --pull=newer \
+ghcr.io/jasonn3/build-container-installer:latest \
+IMAGE_REPO=ghcr.io/octocat \
+IMAGE_NAME=weird-os \
+IMAGE_TAG=latest \
+VARIANT=Silverblue # should match the variant your image is based on
+```
 
 ## Verification
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign).
+
+### Verify `cosign.pub`
 
 ```bash
 cosign verify --key cosign.pub ghcr.io/askpng/pbuild
