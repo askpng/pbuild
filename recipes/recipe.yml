@@ -50,11 +50,11 @@ modules:
       - JetBrainsMono
       - NerdFontsSymbolsOnly
 
-    - from-file: btrfs-butter.yml
-    - from-file: ptyxis.yml
-    - from-file: t480s-utilities.yml
-    - from-file: gnome-extensions.yml
-    - from-file: flatpak-system.yml
-    - from-file: flatpak-user.yml
+  - from-file: btrfs-butter.yml
+  - from-file: ptyxis.yml
+  - from-file: t480s-utilities.yml
+  - from-file: gnome-extensions.yml
+  - from-file: flatpak-system.yml
+  - from-file: flatpak-user.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
