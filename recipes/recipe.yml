@@ -2,7 +2,8 @@ name: pbuild
 description: Personal build, created out of curiosity
 
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 40 # latest is also supported if you want new updates ASAP
+image-version: 40
+# image-version: latest # for latest stable version, not recommended
 
 modules:
   - type: files
