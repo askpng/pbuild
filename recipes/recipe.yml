@@ -19,7 +19,6 @@ modules:
       - fastfetch
       - fish
       - firewall-config
-      - gnome-extensions-app
       - igt-gpu-tools
       - pulseaudio-utils
       - rsms-inter-fonts
@@ -28,7 +27,7 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
-      - gnome-classic-session
+      # - gnome-classic-session
       - gnome-software-rpm-ostree
       - gnome-tour
       - htop
@@ -53,5 +52,7 @@ modules:
   - from-file: gnome-extensions.yml
   - from-file: flatpak-system.yml
   - from-file: flatpak-user.yml
+
+  - from-file: yafti.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
