@@ -1,7 +1,6 @@
 type: default-flatpaks
 notify: true
 user:
-  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
   repo-title: "Flathub (user)"
   install:
