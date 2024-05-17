@@ -21,7 +21,6 @@ modules:
       - firewall-config
       - gnome-extensions-app
       - igt-gpu-tools
-      - make
       - pulseaudio-utils
       - rsms-inter-fonts
       - thefuck
@@ -29,8 +28,11 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
+      - gnome-classic-session
       - gnome-software-rpm-ostree
       - gnome-tour
+      - htop
+      - nvtop
       - yelp
     
   - type: systemd
