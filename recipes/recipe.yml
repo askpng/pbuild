@@ -20,11 +20,11 @@ modules:
       - fish
       - firewall-config
       - gnome-extensions-app
-      - gnome-tweaks
       - igt-gpu-tools
       - make
       - pulseaudio-utils
       - rsms-inter-fonts
+      - thefuck
       - wl-clipboard
     remove:
       - firefox
@@ -41,7 +41,8 @@ modules:
       - gnome-terminal
       - htop
       - nvtop
-      - tailscaled
+      - tailscale
+      - vim
       - vim-enhanced
       - yelp
     
