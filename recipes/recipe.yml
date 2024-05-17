@@ -41,7 +41,6 @@ modules:
       - gnome-terminal
       - htop
       - nvtop
-      - tailscale
       - vim
       - vim-enhanced
       - yelp
