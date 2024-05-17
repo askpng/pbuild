@@ -29,13 +29,8 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
-      - gnome-classic-session
-      - gnome-classic-session-xsession
       - gnome-software-rpm-ostree
       - gnome-tour
-      - htop
-      - nvtop
-      - vim
       - yelp
     
   - type: systemd
