@@ -32,7 +32,7 @@ The following packages are installed by default for improving Lenovo T480/s powe
 - `throttled` for undervolting
 - `zcfan` for fan control
 
-> `zcfan` needs `rpm-ostree --kargs=thinkpad_acpi.fan_control=1`
+> `zcfan` needs `rpm-ostree kargs --append=thinkpad_acpi.fan_control=1`
 
 The following packages are removed from the base due to conflicts:
 - fprintd
