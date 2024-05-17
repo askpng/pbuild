@@ -25,8 +25,8 @@ ISO file for a fresh install can be generated using `docker` or `podman` from a 
 mkdir ./iso-output
 sudo docker run --rm --privileged --volume ./iso-output:/build-container-installer/build --pull=always \
 ghcr.io/jasonn3/build-container-installer:latest \
-IMAGE_REPO=ghcr.io/octocat \
-IMAGE_NAME=weird-os \
+IMAGE_REPO=ghcr.io/askpng \
+IMAGE_NAME=pbuild \
 IMAGE_TAG=latest \
 VARIANT=Silverblue # should match the variant your image is based on
 ```
@@ -35,8 +35,8 @@ VARIANT=Silverblue # should match the variant your image is based on
 mkdir ./iso-output
 sudo podman run --rm --privileged --volume ./iso-output:/build-container-installer/build --security-opt label=disable --pull=newer \
 ghcr.io/jasonn3/build-container-installer:latest \
-IMAGE_REPO=ghcr.io/octocat \
-IMAGE_NAME=weird-os \
+IMAGE_REPO=ghcr.io/askpng \
+IMAGE_NAME=pbuild \
 IMAGE_TAG=latest \
 VARIANT=Silverblue # should match the variant your image is based on
 ```
