@@ -8,15 +8,10 @@ system:
     - com.github.d4nj1.tlpui
     - com.github.tchx84.Flatseal
     - com.mattjakeman.ExtensionManager
-    - com.quexten.Goldwarden
-    - io.github.cboxdoerfer.FSearch
-    - io.github.dvlv.boxbuddyrs
     - io.github.flattool.Warehouse
     - io.missioncenter.MissionCenter
-    - org.chromium.Chromium
     - org.gnome.Calendar
     - org.gnome.Epiphany
-    - org.gnome.Evince
     - org.gnome.Evolution
     - org.gnome.Firmware
     - org.gnome.Loupe
@@ -25,4 +20,20 @@ system:
     - org.gnome.clocks
     - org.gnome.seahorse.Application
     - org.mozilla.firefox
+
+user:
+  repo-name: flathub
+  repo-title: "Flathub (user)"
+  install:
+    - app.drey.Warp
+    - ca.desrt.dconf-editor
+    - com.github.johnfactotum.Foliate
+    - com.github.rafostar.Clapper
+    - com.quexten.Goldwarden
+    - io.github.cboxdoerfer.FSearch
+    - io.github.dvlv.boxbuddyrs
+    - io.github.nokse22.minitext
+    - io.github.spacingbat3.webcord
+    - org.chromium.Chromium
     - re.sonny.Junction
+    
