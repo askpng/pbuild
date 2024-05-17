@@ -38,11 +38,9 @@ modules:
       - gnome-shell-extension-window-list
       - gnome-software-rpm-ostree
       - gnome-tour
-      - gnome-terminal
       - htop
       - nvtop
       - vim
-      - vim-enhanced
       - yelp
     
   - type: systemd
