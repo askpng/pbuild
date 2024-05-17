@@ -21,9 +21,11 @@ modules:
       - firewall-config
       - gnome-boxes
       - gnome-extensions-app
+      - gnome-tweaks
       - igt-gpu-tools
       - make
       - pulseaudio-utils
+      - rsms-inter-fonts
       - wl-clipboard
     remove:
       - firefox
@@ -38,11 +40,12 @@ modules:
         - NetworkManager-wait-online.service
           
   - type: fonts
-    fonts:
+    nerd-fonts:
       - Terminus
       - JetBrainsMono
       - NerdFontsSymbolsOnly
 
+  - from-file: btrfs-assistant.yml
   - from-file: btrfs-butter.yml
   - from-file: ptyxis.yml
   - from-file: t480s-utilities.yml
