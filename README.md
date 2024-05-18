@@ -1,6 +1,6 @@
 # pbuild &nbsp; [![build-ublue](https://github.com/askpng/pbuild/actions/workflows/build.yml/badge.svg)](https://github.com/askpng/pbuild/actions/workflows/build.yml)
 
-I created this because I want to learn how this works and at the end of the day, I want a computer that runs itself the way I want it to, without unnecessary extras. Who knows what will come out of this. Probably nothing!
+Build intended as a learning project. Maybe one day this will turn into the perfect system for my computers to run on, who knows!
 
 [BlueBuild docs](https://blue-build.org/how-to/setup/) for reference.
 
@@ -11,15 +11,14 @@ This image installs the following details by default:
 - `fastfetch` because I like having it on my host system
 - `fish` as it's what I prefer
 - `firewall-config` for point-and-click firewall management
-- `gnome-boxes` installed on host for UEFI (Flatpak Boxes doesn't offer UEFI)
-- `gnome-extensions-app` for easier management
 - `igt-gpu-tools` to monitor GPU use
-- `make`, just in case!
 - `pulseaudio-utils`
+- `rsms-inter-fonts` because it's lovely
+- `thefuck` so I can give a fuck
 - `wl-clipboard`
 
 Removed packages:
-- `firefox` and `firefox-langpacks` as I prefer the Flatpak version
+- `firefox` and `firefox-langpacks` - I prefer the Flatpak version
 - `gnome-software-rpm-ostree`
 - `gnome-tour`
 - `yelp`
@@ -32,7 +31,7 @@ The following packages are installed by default for improving Lenovo T480/s powe
 - `throttled` for undervolting
 - `zcfan` for fan control
 
-> `zcfan` needs `rpm-ostree kargs --append=thinkpad_acpi.fan_control=1`
+> `zcfan` needs `rpm-ostree kargs --append=thinkpad_acpi.fan_control=1` to work.
 
 The following packages are removed from the base due to conflicts:
 - fprintd
@@ -42,7 +41,7 @@ The following packages are removed from the base due to conflicts:
 
 # Installation
 
-> Do at your own risk.
+> Do at your own risk. This build is a heavy work in progress and even I don't use it on bare metal.
 
 Rebase guide:
 
