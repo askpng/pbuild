@@ -30,6 +30,7 @@ modules:
       - firefox-langpacks
       - gnome-software-rpm-ostree
       - gnome-tour
+      - gnome-terminal-nautilus
       - gnome-terminal
       - htop
       - nvtop
