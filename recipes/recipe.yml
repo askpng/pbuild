@@ -20,6 +20,7 @@ modules:
       - gnome-console
       - ibus-mozc
       - firewall-config
+      - gnome-shell-extension-gsconnect
       - igt-gpu-tools
       - pulseaudio-utils
       - rsms-inter-fonts
