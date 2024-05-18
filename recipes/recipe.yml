@@ -17,6 +17,7 @@ modules:
       - epson-inkjet-printer-escpr2
       - fastfetch
       - fish
+      - gnome-terminal
       - ibus-mozc
       - firewall-config
       - igt-gpu-tools
@@ -29,6 +30,7 @@ modules:
       - firefox-langpacks
       - gnome-software-rpm-ostree
       - gnome-tour
+      - gnome-terminal
       - htop
       - nvtop
       - yelp
@@ -46,7 +48,7 @@ modules:
 
   - from-file: btrfs-assistant.yml
   - from-file: btrfs-butter.yml
-  - from-file: ptyxis.yml
+  # - from-file: ptyxis.yml - prefer flatpak ptyxis
   - from-file: t480s-utilities.yml
   - from-file: gnome-extensions.yml
   - from-file: flatpak-system.yml
