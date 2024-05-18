@@ -11,6 +11,7 @@ This image installs the following details by default:
 - `fastfetch` because I like having it on my host system
 - `fish` as it's what I prefer
 - `firewall-config` for point-and-click firewall management
+- `ibus-mozc` for testing purposes - I normally use `ibus-anthy` for its convenient IME & kana toggle
 - `igt-gpu-tools` to monitor GPU use
 - `pulseaudio-utils`
 - `rsms-inter-fonts` because it's lovely
@@ -34,10 +35,10 @@ The following packages are installed by default for improving Lenovo T480/s powe
 > `zcfan` needs `rpm-ostree kargs --append=thinkpad_acpi.fan_control=1` to work.
 
 The following packages are removed from the base due to conflicts:
-- fprintd
-- fprintd-pam
-- power-profiles-daemon
-- thermald
+- `fprintd`
+- `fprintd-pam`
+- `power-profiles-daemon`
+- `thermald`
 
 # Installation
 
