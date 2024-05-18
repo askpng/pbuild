@@ -11,6 +11,7 @@ This image installs the following details by default:
 - `fastfetch` because I like having it on my host system
 - `fish` as it's what I prefer
 - `firewall-config` for point-and-click firewall management
+- `gnome-console` included until I figure out proper Ptyxis integration
 - `ibus-mozc` for testing purposes - I normally use `ibus-anthy` for its convenient IME & kana toggle
 - `igt-gpu-tools` to monitor GPU use
 - `pulseaudio-utils`
@@ -23,8 +24,10 @@ Removed packages:
 - `gnome-software-rpm-ostree`
 - `gnome-tour`
 - `yelp`
+
 ## BTRFS-related packages
 BTRFS snapshots are handled by either `butter` or `snapper` and `btrfs-assistant`.
+
 ## T480/s packages
 The following packages are installed by default for improving Lenovo T480/s power management, performance, and features:
 - sneexy's fork of [python-validity](https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/)
@@ -42,9 +45,13 @@ The following packages are removed from the base due to conflicts:
 
 # Installation
 
-> Do at your own risk. This build is a heavy work in progress and even I don't use it on bare metal.
+> Do at your own risk. This build is a heavy work in progress and ~~even I don't use it on bare metal~~ I use it, but I guarantee nothing.
 
-Rebase guide:
+This build *works* but it's still loose in a lot of places. I haven't figured out how to configure Flatpaks the way I want; automatic updates are a bit sus; BoxBuddy and Distrobox drive me crazy and maybe I should have stripped Bluefin down instead. Maybe I will if I get sick of debugging.
+
+If you managed to even get here and read this far, first of all, why? Second of all, maybe you shouldn't, but if you insist, do try out and help me make this a better build (please).
+
+## Rebase
 
 - Rebase to the unsigned image to get the proper signing keys + policies installed and reboot:
   ```
@@ -54,11 +61,12 @@ Rebase guide:
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/askpng/pbuild:latest --reboot
   ```
-# ISO
+
+## ISO
 
 ISO file for a fresh install can be generated using `docker` or `podman` from a Silverblue system.
 
-## Docker
+### Via Docker
 ```
 mkdir ./iso-output
 sudo docker run --rm --privileged --volume ./iso-output:/build-container-installer/build --pull=always \
@@ -68,7 +76,7 @@ IMAGE_NAME=pbuild \
 IMAGE_TAG=latest \
 VARIANT=Silverblue # should match the variant your image is based on
 ```
-## Podman
+### Via Podman
 ```
 mkdir ./iso-output
 sudo podman run --rm --privileged --volume ./iso-output:/build-container-installer/build --security-opt label=disable --pull=newer \
@@ -79,7 +87,7 @@ IMAGE_TAG=latest \
 VARIANT=Silverblue # should match the variant your image is based on
 ```
 
-# Verification
+## Verification
 
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign).
 
