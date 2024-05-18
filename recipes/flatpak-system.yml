@@ -3,9 +3,9 @@ notify: true
 system:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
-  repo-title: "Flathub (system-wide)"
+  repo-title: "Flathub (system)"
   install:
-    - com.github.d4nj1.tlpui
+    - app.devsuite.Ptyxis
     - com.github.tchx84.Flatseal
     - com.mattjakeman.ExtensionManager
     - io.github.flattool.Warehouse
@@ -27,6 +27,7 @@ user:
   install:
     - app.drey.Warp
     - ca.desrt.dconf-editor
+    - com.github.d4nj1.tlpui
     - com.github.johnfactotum.Foliate
     - com.github.rafostar.Clapper
     - com.quexten.Goldwarden
