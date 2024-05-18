@@ -17,7 +17,7 @@ modules:
       - epson-inkjet-printer-escpr2
       - fastfetch
       - fish
-      - gnome-terminal
+      - gnome-console
       - ibus-mozc
       - firewall-config
       - igt-gpu-tools
