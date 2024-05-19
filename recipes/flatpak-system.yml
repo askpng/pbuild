@@ -1,40 +1,26 @@
 type: default-flatpaks
-notify: true
 system:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
   repo-title: "Flathub (system)"
   install:
     - app.devsuite.Ptyxis
+    - com.github.d4nj1.tlpui
     - com.github.tchx84.Flatseal
     - com.mattjakeman.ExtensionManager
+    - io.github.cboxdoerfer.FSearch
+    - io.github.dvlv.boxbuddyrs
     - io.github.flattool.Warehouse
     - io.missioncenter.MissionCenter
-    - org.gnome.Calendar
-    - org.gnome.Epiphany
-    - org.gnome.Evolution
     - org.gnome.Firmware
-    - org.gnome.Loupe
-    - org.gnome.NautilusPreviewer
-    - org.gnome.Weather
-    - org.gnome.clocks
     - org.gnome.seahorse.Application
-    - org.mozilla.firefox
+    - re.sonny.Junction
 
 user:
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
   repo-title: "Flathub (user)"
   install:
-    - app.drey.Warp
-    - ca.desrt.dconf-editor
-    - com.github.d4nj1.tlpui
-    - com.github.johnfactotum.Foliate
-    - com.github.rafostar.Clapper
-    - com.quexten.Goldwarden
-    - io.github.cboxdoerfer.FSearch
-    - io.github.dvlv.boxbuddyrs
-    - io.github.nokse22.minitext
+    - org.mozilla.firefox
     - io.github.spacingbat3.webcord
-    - org.chromium.Chromium
-    - re.sonny.Junction
-    
+    - org.chromium.Chromium 
