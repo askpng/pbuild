@@ -24,7 +24,7 @@ modules:
       - gnome-shell-extension-gsconnect
       - ibus-mozc
       - igt-gpu-tools
-      - nautilus-open-any-terminal
+      - open-any-terminal
       - pulseaudio-utils
       - rsms-inter-fonts
       - thefuck
