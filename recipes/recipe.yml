@@ -12,7 +12,10 @@ modules:
       
   - type: rpm-ostree
     repos:
+      # nautilus-open-any-terminal
+      - https://copr.fedorainfracloud.org/coprs/julianve/open-any-terminal/repo/fedora-%OS_VERSION%/julianve-open-any-terminal-fedora-%OS_VERSION%.repo
     install:
+      - blackbox-terminal
       - epson-inkjet-printer-escpr
       - epson-inkjet-printer-escpr2
       - fastfetch
