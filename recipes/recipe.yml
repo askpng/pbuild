@@ -17,11 +17,11 @@ modules:
       - epson-inkjet-printer-escpr2
       - fastfetch
       - fish
-      - gnome-console
-      - ibus-mozc
       - firewall-config
       - gnome-shell-extension-gsconnect
+      - ibus-mozc
       - igt-gpu-tools
+      - nautilus-open-any-terminal
       - pulseaudio-utils
       - rsms-inter-fonts
       - thefuck
@@ -42,19 +42,16 @@ modules:
       disabled:
         - NetworkManager-wait-online.service
           
-  - type: fonts
-    nerd-fonts:
-      - Terminus
-      - JetBrainsMono
-      - NerdFontsSymbolsOnly
+  # - type: fonts
+  #  nerd-fonts:
+  #    - Terminus
+  #    - JetBrainsMono
+  #    - NerdFontsSymbolsOnly
 
   - from-file: btrfs-assistant.yml
   - from-file: btrfs-butter.yml
-  # - from-file: ptyxis.yml - prefer flatpak ptyxis
   - from-file: t480s-utilities.yml
   - from-file: gnome-extensions.yml
   - from-file: flatpak-system.yml
-  # - from-file: flatpak-user.yml
-  # - from-file: yafti.yml
 
   - type: signing
