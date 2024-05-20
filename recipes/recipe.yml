@@ -11,6 +11,9 @@ modules:
       - etc: /etc
   
   - from-file: default-packages.yml
+  - from-file: t480s-utilities.yml
+  - from-file: gnome-extensions.yml
+  - from-file: flatpaks.yml
           
   - type: fonts
     fonts:
@@ -25,12 +28,6 @@ modules:
         - Nunito Sans
         - Nova Mono
         - PT Sans
-  
-  - from-file: t480s-utilities.yml
-  
-  - from-file: gnome-extensions.yml
-  
-  - from-file: flatpaks.yml
 
   # - from-file: yafti.yml | work in progress
   
