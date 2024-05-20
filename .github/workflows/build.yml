@@ -1,7 +1,7 @@
 name: bluebuild
 on:
   schedule:
-    - cron: "00 23 * * *" # build at 23:00:00 UTC (06:00:00 UTC+7)
+    - cron: "00 18 * * *" # build at 18:00:00 UTC (01:00:00 UTC+7)
                           # build times manually changed from 17:00:00 UTC
   push:
     paths:  
