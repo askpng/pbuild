@@ -23,10 +23,15 @@ modules:
       #   - NerdFontsSymbolsOnly
       google-fonts:
       　- DotGothic16
-        - JetBrains Mono
-        - M Plus 1p
-        - Nunito Sans
-        - Nova Mono
-        - PT Sans
+      #  - JetBrains Mono
+      #  - M Plus 1p
+      #  - Nunito Sans
+      #  - Nova Mono
+      #  - PT Sans
+
+  - type: systemd
+    system:
+      disabled:
+        - NetworkManager-wait-online.service
 
   - type: signing
