@@ -28,7 +28,7 @@ modules:
         - Nunito Sans
         - Nova Mono
         - PT Sans
-        
+
   - type: systemd
     system:
       disabled:
