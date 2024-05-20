@@ -28,9 +28,7 @@ modules:
         - Nunito Sans
         - Nova Mono
         - PT Sans
-
-  # - from-file: yafti.yml | work in progress
-  
+        
   - type: systemd
     system:
       disabled:
