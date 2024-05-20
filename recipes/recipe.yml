@@ -17,16 +17,14 @@ modules:
   #    - Terminus
   #    - JetBrainsMono
   #    - NerdFontsSymbolsOnly
-
-  # - from-file: btrfs-assistant.yml
-  
-  # - from-file: btrfs-butter.yml
   
   - from-file: t480s-utilities.yml
   
   - from-file: gnome-extensions.yml
   
   - from-file: flatpaks.yml
+
+  # - from-file: yafti.yml | work in progress
   
   - type: systemd
     system:
