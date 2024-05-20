@@ -14,20 +14,6 @@ modules:
   - from-file: t480s-utilities.yml
   - from-file: gnome-extensions.yml
   - from-file: flatpaks.yml
-          
-  - type: fonts
-    fonts:
-      # nerd-fonts:
-      #   - Terminus
-      #   - JetBrainsMono
-      #   - NerdFontsSymbolsOnly
-      google-fonts:
-      　- DotGothic16
-      #  - JetBrains Mono
-      #  - M Plus 1p
-      #  - Nunito Sans
-      #  - Nova Mono
-      #  - PT Sans
 
   - type: systemd
     system:
