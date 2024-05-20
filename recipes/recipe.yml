@@ -12,11 +12,19 @@ modules:
   
   - from-file: default-packages.yml
           
-  # - type: fonts
-  #  nerd-fonts:
-  #    - Terminus
-  #    - JetBrainsMono
-  #    - NerdFontsSymbolsOnly
+  - type: fonts
+    fonts:
+      # nerd-fonts:
+      #   - Terminus
+      #   - JetBrainsMono
+      #   - NerdFontsSymbolsOnly
+      google-fonts:
+      　- DotGothic16
+        - JetBrains Mono
+        - M Plus 1p
+        - Nunito Sans
+        - Nova Mono
+        - PT Sans
   
   - from-file: t480s-utilities.yml
   
