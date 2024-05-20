@@ -9,41 +9,8 @@ modules:
     files:
       - usr: /usr
       - etc: /etc
-      
-  - type: rpm-ostree
-    repos:
-      # nautilus-open-any-terminal
-      - https://copr.fedorainfracloud.org/coprs/julianve/open-any-terminal/repo/fedora-%OS_VERSION%/julianve-open-any-terminal-fedora-%OS_VERSION%.repo
-    install:
-      - blackbox-terminal
-      - epson-inkjet-printer-escpr
-      - epson-inkjet-printer-escpr2
-      - fastfetch
-      - fish
-      - firewall-config
-      - gnome-shell-extension-gsconnect
-      - ibus-mozc
-      - igt-gpu-tools
-      - open-any-terminal
-      - pulseaudio-utils
-      - rsms-inter-fonts
-      - thefuck
-      - wl-clipboard
-    remove:
-      - firefox
-      - firefox-langpacks
-      - gnome-software-rpm-ostree
-      - gnome-tour
-      - gnome-terminal-nautilus
-      - gnome-terminal
-      - htop
-      - nvtop
-      - yelp
-    
-  - type: systemd
-    system:
-      disabled:
-        - NetworkManager-wait-online.service
+  
+  - from-file: default-packages.yml
           
   # - type: fonts
   #  nerd-fonts:
@@ -51,10 +18,19 @@ modules:
   #    - JetBrainsMono
   #    - NerdFontsSymbolsOnly
 
-  - from-file: btrfs-assistant.yml
-  - from-file: btrfs-butter.yml
+  # - from-file: btrfs-assistant.yml
+  
+  # - from-file: btrfs-butter.yml
+  
   - from-file: t480s-utilities.yml
+  
   - from-file: gnome-extensions.yml
-  - from-file: flatpak-system.yml
+  
+  - from-file: flatpaks.yml
+  
+  - type: systemd
+    system:
+      disabled:
+        - NetworkManager-wait-online.service
 
   - type: signing
