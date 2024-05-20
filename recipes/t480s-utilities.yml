@@ -4,10 +4,6 @@
 # - zcfan, for controlling thinkpad fan (adding kargs required) 
 
 modules:
-  - type: files
-    files:
-      # Copy throttled, tlp, and zcfan configuration files
-      - etc: /etc
   - type: rpm-ostree
     repos:
       # abn/throttled 
