@@ -1,11 +1,10 @@
 name: bluebuild
 on:
   schedule:
-    - cron: "00 17 15 * *" # build at 17:15 UTC every day 
-                          # (20 minutes after last ublue images start building)
+    - cron: "00 18 * * *" # build at 18:00 UTC every day
   push:
-    paths-ignore: # don't rebuild if only documentation has changed
-      - "**.md"      # - "**.md"
+    paths:
+      - "recipes/*.yml" # trigger build when any .yml under /recipe is updated 
   
   pull_request:
   workflow_dispatch: # allow manually triggering builds
