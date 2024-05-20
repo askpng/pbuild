@@ -13,7 +13,6 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/zhangyuannie/butter/repo/fedora-%OS_VERSION%/zhangyuannie-butter-fedora-%OS_VERSION%.repo # butter
-      - https://copr.fedorainfracloud.org/coprs/julianve/open-any-terminal/repo/fedora-%OS_VERSION%/julianve-open-any-terminal-fedora-%OS_VERSION%.repo # open-any-terminal
     install:
       - butter
       - blackbox-terminal
@@ -25,7 +24,6 @@ modules:
       - gnome-shell-extension-gsconnect
       - ibus-mozc
       - igt-gpu-tools
-      - open-any-terminal
       - pulseaudio-utils
       - rsms-inter-fonts
       - thefuck
