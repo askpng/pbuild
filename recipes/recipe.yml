@@ -29,9 +29,4 @@ modules:
         - Nova Mono
         - PT Sans
 
-  - type: systemd
-    system:
-      disabled:
-        - NetworkManager-wait-online.service
-
   - type: signing
