@@ -7,12 +7,12 @@ image-version: 40
 modules:
   - type: files
     files:
-      - usr: ./files/usr
-      - etc: ./files/etc
+      - usr: /usr
+      #- etc: /usr/etc
 
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/zhangyuannie/butter/repo/fedora-%OS_VERSION%/zhangyuannie-butter-fedora-%OS_VERSION%.repo # butter
+      - https://copr.fedorainfracloud.org/coprs/zhangyuannie/butter/repo/fedora-%OS_VERSION%/zhangyuannie-butter-fedora-%OS_VERSION%.repo #butter
     install:
       - butter
       - blackbox-terminal
@@ -40,9 +40,10 @@ modules:
       - yelp
   
   - from-file: base/t480s.yml
+  #- from-file: base/fonts.yml
   - from-file: base/gnome-extensions.yml
   - from-file: flatpak/default-flatpaks.yml
-  # - from-file: recipes/flatpak/yafti.yml
+  #- from-file: recipes/flatpak/yafti.yml
 
   - type: systemd
     system:
