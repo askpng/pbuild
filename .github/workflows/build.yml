@@ -4,7 +4,7 @@ on:
     - cron: "00 18 * * *" # build at 18:00 UTC every day
   push:
     paths:
-      - "recipes/*.yml" # trigger build when any .yml under /recipe is updated 
+      - "recipes/recipe.yml" # trigger build when any .yml under /recipe is updated 
   
   pull_request:
   workflow_dispatch: # allow manually triggering builds

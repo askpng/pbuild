@@ -1,0 +1,35 @@
+type: default-flatpaks
+system:
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  repo-name: flathub
+  repo-title: "Flathub (system)"
+  install:
+    - app.devsuite.Ptyxis
+    - com.github.d4nj1.tlpui
+    - com.github.tchx84.Flatseal
+    - com.mattjakeman.ExtensionManager
+    - io.github.cboxdoerfer.FSearch
+    - io.github.dvlv.boxbuddyrs
+    - io.github.flattool.Warehouse
+    - io.missioncenter.MissionCenter
+    - org.gnome.clocks
+    - org.gnome.Evince
+    - org.gnome.FileRoller
+    - org.gnome.Firmware
+    - org.gnome.seahorse.Application
+    - org.gnome.Weather
+    - re.sonny.Junction
+
+user:
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  repo-name: flathub
+  repo-title: "Flathub (user)"
+  install:
+    - com.github.johnfactotum.Foliate
+    - org.chromium.Chromium 
+    - org.flameshot.Flameshot
+    - org.mozilla.firefox
+    - io.github.quodlibet.QuodLibet
+    - io.github.spacingbat3.webcord
+    - io.gitlab.liferooter.TextPieces
+    - org.chromium.Chromium
