@@ -7,8 +7,8 @@ image-version: 40
 modules:
   - type: files
     files:
-      - usr: /usr
-      - etc: /etc
+      - usr: ./files/usr
+      - etc: ./files/etc
 
   - type: rpm-ostree
     repos:
@@ -39,9 +39,10 @@ modules:
       - nvtop
       - yelp
   
-  - from-file: t480s-utilities.yml
-  - from-file: gnome-extensions.yml
-  - from-file: flatpaks.yml
+  - from-file: base/t480s.yml
+  - from-file: base/gnome-extensions.yml
+  - from-file: flatpak/default-flatpaks.yml
+  # - from-file: recipes/flatpak/yafti.yml
 
   - type: systemd
     system:
