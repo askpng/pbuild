@@ -16,7 +16,7 @@ Would not be possible without the power of [BlueBuild](https://blue-build.org/ho
 - [silverblue-main](https://github.com/ublue-os/main/pkgs/container/silverblue-main) as base image. `40` only; will advance to 41 about a month after it releases.
 
 ## Default packages
-The following packages are installed by default. 
+In addition to the default packages installed in the `silverblue-main` base image, the following packages are installed by default. 
 - `butter` by [zhangyuannie](https://github.com/zhangyuannie/butter)
 - `blackbox-terminal`, eventually will be replaced with Ptyxis
 - `epson-inkjet-printer-escpr` and `epson-inkjet-printer-escpr2`
@@ -70,13 +70,15 @@ The following apps are installed as *system* Flatpaks by default.
 - BoxBuddy
 - ExtensionManager
 - FSearch
-- FileRoller
-- Firmware
+- File Roller
 - Flatseal
+- GNOME Clocks
+- GNOME Document Viewer (Evince)
+- GNOME Firmware
+- GNOME Passwords and Keys (Seahorse)
 - Junction
 - Mission Center
 - Ptyxis
-- Seahorse / GNOME Passwords and Keys 
 - TLP UI
 - Warehouse
 
@@ -91,8 +93,6 @@ The following apps are installed as *user* Flatpaks by default.
 - Evolution
 - File Roller
 - GNOME Calendar
-- GNOME Clocks
-- GNOME Document Viewer (Evince)
 - GNOME Camera (Snapshot)
 - GNOME Web (Epiphany) 
 - GNOME Weather
