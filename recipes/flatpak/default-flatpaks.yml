@@ -7,6 +7,7 @@ system:
     - app.devsuite.Ptyxis
     - com.github.d4nj1.tlpui
     - com.github.tchx84.Flatseal
+    - com.github.rafostar.Clapper
     - com.mattjakeman.ExtensionManager
     - io.github.cboxdoerfer.FSearch
     - io.github.dvlv.boxbuddyrs
@@ -18,8 +19,10 @@ system:
     - org.gnome.Evince
     - org.gnome.FileRoller
     - org.gnome.Firmware
+    - org.gnome.Loupe
     - org.gnome.seahorse.Application
     - org.gnome.Snapshot
+    - org.gnome.TextEditor
     - org.gnome.Weather
     - page.codeberg.libre_menu_editor.LibreMenuEditor
     - re.sonny.Junction

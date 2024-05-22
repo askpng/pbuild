@@ -68,6 +68,7 @@ At the moment, automatic updates follow BlueBuild defaults. Eventually, I would 
 ## Flatpak
 The following apps are installed as *system* Flatpaks by default.
 - BoxBuddy
+- Clapper
 - ExtensionManager
 - FSearch
 - File Roller
@@ -75,7 +76,9 @@ The following apps are installed as *system* Flatpaks by default.
 - GNOME Clocks
 - GNOME Document Viewer (Evince)
 - GNOME Firmware
+- GNOME Image Viewer (Loupe)
 - GNOME Passwords and Keys (Seahorse)
+- GNOME Text Editor
 - Junction
 - Mission Center
 - Ptyxis
@@ -91,21 +94,19 @@ The following apps are installed as *user* Flatpaks by default.
 ### TBA - System Flatpaks
 - Celluloid
 - Evolution
-- File Roller
+- ✅ File Roller
 - GNOME Calendar
-- GNOME Camera (Snapshot)
-- GNOME Web (Epiphany) 
-- GNOME Weather
-- Kooha
-- Main Menu (Libre Menu Editor)
+- ✅ GNOME Camera (Snapshot)
+- ✅ GNOME Web (Epiphany) 
+- ✅ GNOME Weather
+- ✅ Kooha
+- ✅ Main Menu (Libre Menu Editor)
 
 ### TBA - User Flatpaks
 - Bitwarden
 - Flameshot
-- Foliate
 - Fragments
-- Github Desktop
-- QuodLibet
+- ✅ QuodLibet
 - Spotify
 
 > Alternatively, the apps above will be available for installation via `yafti`.
