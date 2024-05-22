@@ -1,7 +1,7 @@
 # pbuild
 [![build-ublue](https://github.com/askpng/pbuild/actions/workflows/build.yml/badge.svg)](https://github.com/askpng/pbuild/actions/workflows/build.yml)
 
-> This image is set to automatically build every day at 18:00 UTC and upon `recipes/*.yml` updates.
+> This image is set to automatically build every day at 17:30 UTC and upon `recipes/*.yml` updates.
 
 Build intended as a learning project. Maybe one day this will turn into the perfect system for my computers to run on, who knows!
 
