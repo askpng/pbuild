@@ -35,6 +35,7 @@ user:
     - com.github.johnfactotum.Foliate
     - org.chromium.Chromium 
     - org.flameshot.Flameshot
+    - com.github.wwmm.easyeffects
     - org.mozilla.firefox
     - io.github.quodlibet.QuodLibet
     - io.github.spacingbat3.webcord
