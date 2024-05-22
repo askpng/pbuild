@@ -87,6 +87,7 @@ The following apps are installed as *system* Flatpaks by default.
 
 The following apps are installed as *user* Flatpaks by default.
 - Chromium
+- Easy Effects
 - Firefox
 - TextPieces
 - Webcord
