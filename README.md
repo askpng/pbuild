@@ -25,6 +25,9 @@ In addition to the default packages installed in the `silverblue-main` base imag
 - `firewall-config`
 - `gnome-shell-extension-gsconnect` to ensure all dependencies are installed
 - `ibus-mozc` for experimental purposes (`ibus-anthy` has better toggles for non-JIS keyboards)
+- `morewaita-icon-theme`
+- `numix-icon-theme`
+- `papirus-icon-theme`
 - `igt-gpu-tools`
 - `pulseaudio-utils`
 - `rsms-inter-fonts`, eventually will be replaced with fonts installed via the `fonts` module
