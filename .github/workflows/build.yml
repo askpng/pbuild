@@ -2,9 +2,9 @@ name: bluebuild
 on:
   schedule:
     - cron: "30 17 * * *" # build at 18:00 UTC every day
-  push:
-    paths:
-      - "recipes/recipe.yml" # trigger build when any .yml under /recipe is updated 
+  #push:
+    #paths:
+      #- "recipes/recipe.yml" # trigger build when any .yml under /recipe is updated 
   
   pull_request:
   workflow_dispatch: # allow manually triggering builds
