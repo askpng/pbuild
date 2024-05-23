@@ -1,7 +1,7 @@
 # pbuild
 [![build-ublue](https://github.com/askpng/pbuild/actions/workflows/build.yml/badge.svg)](https://github.com/askpng/pbuild/actions/workflows/build.yml)
 
-> This image is set to automatically build every day at 17:30 UTC and upon `recipes/*.yml` updates.
+> This image is set to automatically build every day at 17:30 UTC and upon `recipes/recipe.yml` updates.
 
 Build intended as a learning project. Maybe one day this will turn into the perfect system for my computers to run on, who knows!
 
@@ -16,6 +16,7 @@ Would not be possible without the power of [BlueBuild](https://blue-build.org/ho
 - [silverblue-main](https://github.com/ublue-os/main/pkgs/container/silverblue-main) as base image. `40` only; will advance to 41 about a month after it releases.
 
 ## Default packages
+> Packages are being adjusted daily and the README is not always up-to-date. Refer to the `.yml`s instead.
 In addition to the default packages installed in the `silverblue-main` base image, the following packages are installed by default. 
 - `butter` by [zhangyuannie](https://github.com/zhangyuannie/butter)
 - `blackbox-terminal`, eventually will be replaced with Ptyxis
