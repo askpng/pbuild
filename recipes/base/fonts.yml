@@ -1,14 +1,14 @@
 type: fonts
 fonts:
   nerd-fonts:
-    #- FiraCode # don't add spaces or "Nerd Font" suffix.
-    #- Hack
-    #- SourceCodePro
-    #- Terminus
+    #don't add spaces or "Nerd Font" suffix.
     - JetBrainsMono
     - NerdFontsSymbolsOnly
   google-fonts:
     - DotGothic16
+    - Inter
+    - Martian Mono
+    - Ruda
     - PT Sans
     - Fira Sans
     - Overpass Mono

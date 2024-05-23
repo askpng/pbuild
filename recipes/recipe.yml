@@ -32,7 +32,6 @@ modules:
       - numix-icon-theme
       - papirus-icon-theme
       - pulseaudio-utils
-      - rsms-inter-fonts
       - thefuck
       - wl-clipboard
       #from ublue-staging
