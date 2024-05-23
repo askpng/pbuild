@@ -10,10 +10,13 @@ modules:
       - usr: /usr
       #- etc: /usr/etc
 
+  - from-file: base/fonts.yml
+
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/zhangyuannie/butter/repo/fedora-%OS_VERSION%/zhangyuannie-butter-fedora-%OS_VERSION%.repo #butter
       - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%OS_VERSION%/dusansimic-themes-fedora-%OS_VERSION%.repo #morewaita
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo #ublue-staging for open-any-terminal, ptyxis, vte291
     install:
       - butter
       - blackbox-terminal
@@ -32,19 +35,22 @@ modules:
       - rsms-inter-fonts
       - thefuck
       - wl-clipboard
+      #from ublue-staging
+      - nautilus-open-any-terminal
+      - ptyxis
+      - vte291
     remove:
       - firefox
       - firefox-langpacks
       - gnome-software-rpm-ostree
       - gnome-tour
       - gnome-terminal-nautilus
-      - gnome-terminal
+      #- gnome-terminal - remove for open-any-terminal to work
       - htop
       - nvtop
       - yelp
   
   - from-file: base/t480s.yml
-  #- from-file: base/fonts.yml
   - from-file: base/gnome-extensions.yml
   - from-file: flatpak/default-flatpaks.yml
   #- from-file: recipes/flatpak/yafti.yml
