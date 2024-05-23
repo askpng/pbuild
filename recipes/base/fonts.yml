@@ -5,10 +5,10 @@ fonts:
     - JetBrainsMono
     - NerdFontsSymbolsOnly
   google-fonts:
-    - DotGothic16
-    - Inter
+    #- DotGothic16
+    #- Inter
     - Martian Mono
     - Ruda
     - PT Sans
     - Fira Sans
-    - Overpass Mono
+    #- Overpass Mono
