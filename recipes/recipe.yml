@@ -36,8 +36,8 @@ modules:
       - wl-clipboard
       #from ublue-staging
       - nautilus-open-any-terminal
-      - ptyxis
-      - vte291
+      #- ptyxis
+      #- vte291
     remove:
       - firefox
       - firefox-langpacks
