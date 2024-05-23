@@ -4,7 +4,7 @@ system:
   repo-name: flathub
   repo-title: "Flathub (system)"
   install:
-    #- app.devsuite.Ptyxis
+    - app.devsuite.Ptyxis
     - com.github.d4nj1.tlpui
     - com.github.tchx84.Flatseal
     - com.github.rafostar.Clapper

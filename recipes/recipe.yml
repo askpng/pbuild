@@ -44,7 +44,6 @@ modules:
       - gnome-software-rpm-ostree
       - gnome-tour
       - gnome-terminal-nautilus
-      #- gnome-terminal - remove for open-any-terminal to work
       - htop
       - nvtop
       - yelp
@@ -52,7 +51,7 @@ modules:
   - from-file: base/t480s.yml
   - from-file: base/gnome-extensions.yml
   - from-file: flatpak/default-flatpaks.yml
-  #- from-file: recipes/flatpak/yafti.yml
+  #- from-file: flatpak/yafti.yml
 
   - type: systemd
     system:
