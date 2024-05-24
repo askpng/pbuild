@@ -31,7 +31,6 @@ In addition to the default packages installed in the `silverblue-main` base imag
 - `igt-gpu-tools`
 - `open-any-terminal` from [julianve/open-any-terminal](https://copr.fedorainfracloud.org/coprs/julianve/open-any-terminal)
 - `pulseaudio-utils`
-- `rsms-inter-fonts`, eventually will be replaced with fonts installed via the `fonts` module
 - `thefuck` - a must have!
 - `wl-clipboard`
 
@@ -40,6 +39,16 @@ These icon themes are also installed.
 - `morewaita-icon-theme`
 - `numix-icon-theme`
 - `papirus-icon-theme`
+
+These fonts are installed via the `fonts` module.
+
+- Jet Brains Mono
+- Nerd Fonts Symbols Only
+- Martian Mono
+- Ruda
+- PT Sans
+- Fira Sans
+- Inter... is currently not included due to weird rendering issues. I hope it returns soon, but for the time being I'm alright alternating between Fira Sans and Cantarell!
 
 The following packages are removed from the base image.
 - `firefox` and `firefox-langpacks` - Firefox will be installed as a Flatpak
