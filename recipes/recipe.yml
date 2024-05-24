@@ -8,7 +8,6 @@ modules:
   - type: files
     files:
       - usr: /usr
-      #- etc: /usr/etc
 
   - from-file: base/fonts.yml
 
@@ -16,9 +15,9 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/zhangyuannie/butter/repo/fedora-%OS_VERSION%/zhangyuannie-butter-fedora-%OS_VERSION%.repo #butter
       - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%OS_VERSION%/dusansimic-themes-fedora-%OS_VERSION%.repo #morewaita
-      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo #ublue-staging for open-any-terminal, ptyxis, vte291
+      - https://copr.fedorainfracloud.org/coprs/julianve/open-any-terminal/repo/fedora-%OS_VERSION%/julianve-open-any-terminal-fedora-%OS_VERSION%.repo #open-any-terminal
     install:
-      - butter
+      - butter #butter from zhangyannie/butter
       - blackbox-terminal
       - epson-inkjet-printer-escpr
       - epson-inkjet-printer-escpr2
@@ -28,24 +27,21 @@ modules:
       - gnome-shell-extension-gsconnect
       - ibus-mozc
       - igt-gpu-tools
-      - morewaita-icon-theme
+      - morewaita-icon-theme #morewaita from dusansimic-themes-fedora
       - numix-icon-theme
       - papirus-icon-theme
       - pulseaudio-utils
       - thefuck
       - wl-clipboard
-      #from ublue-staging
-      - nautilus-open-any-terminal
-      #- ptyxis
-      #- vte291
+      - open-any-terminal #open-any-terminal from julianve/open-any-terminal
     remove:
       - firefox
       - firefox-langpacks
-      - gnome-software-rpm-ostree
       - htop
       - nvtop
       - vim-enhanced
       #unnecessary gnomies
+      - gnome-software-rpm-ostree
       - gnome-tour
       - gnome-terminal
       - gnome-terminal-nautilus
@@ -59,7 +55,7 @@ modules:
       #gnome xorg
       - gnome-classic-session
       - gnome-classic-session-xsession
-      
+
   - from-file: base/t480s.yml
   - from-file: base/gnome-extensions.yml
   - from-file: flatpak/default-flatpaks.yml
@@ -69,5 +65,11 @@ modules:
     system:
       disabled:
         - NetworkManager-wait-online.service
+
+  #DO NOT UNCOMMENT BEFORE EVERYTHING
+  #IS PROPERLY CONFIGURED AND TESTED
+  #- type: gschema-overrides
+    #include:
+      #- z0-pbuild-custom.gschema.override
 
   - type: signing

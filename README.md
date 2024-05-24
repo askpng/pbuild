@@ -16,8 +16,10 @@ Would not be possible without the power of [BlueBuild](https://blue-build.org/ho
 - [silverblue-main](https://github.com/ublue-os/main/pkgs/container/silverblue-main) as base image. `40` only; will advance to 41 about a month after it releases.
 
 ## Default packages
-> Packages are being adjusted daily and the README is not always up-to-date. Refer to the `.yml`s instead.
 In addition to the default packages installed in the `silverblue-main` base image, the following packages are installed by default. 
+
+> Packages are being adjusted daily and the README is not always up-to-date. Refer to the `.yml`s instead.
+
 - `butter` by [zhangyuannie](https://github.com/zhangyuannie/butter)
 - `blackbox-terminal`, eventually will be replaced with Ptyxis
 - `epson-inkjet-printer-escpr` and `epson-inkjet-printer-escpr2`
@@ -26,28 +28,25 @@ In addition to the default packages installed in the `silverblue-main` base imag
 - `firewall-config`
 - `gnome-shell-extension-gsconnect` to ensure all dependencies are installed
 - `ibus-mozc` for experimental purposes (`ibus-anthy` has better toggles for non-JIS keyboards)
-- `morewaita-icon-theme`
-- `numix-icon-theme`
-- `papirus-icon-theme`
 - `igt-gpu-tools`
+- `open-any-terminal` from [julianve/open-any-terminal](https://copr.fedorainfracloud.org/coprs/julianve/open-any-terminal)
 - `pulseaudio-utils`
 - `rsms-inter-fonts`, eventually will be replaced with fonts installed via the `fonts` module
 - `thefuck` - a must have!
 - `wl-clipboard`
 
+These icon themes are also installed.
+
+- `morewaita-icon-theme`
+- `numix-icon-theme`
+- `papirus-icon-theme`
+
 The following packages are removed from the base image.
-- `firefox` and `firefox-langpacks` - Firefox will be installed as a user Flatpak 
-- `gnome-software-rpm-ostree`
-- `gnome-tour`
-- `gnome-terminal-nautilus`
-- `gnome-terminal`
+- `firefox` and `firefox-langpacks` - Firefox will be installed as a Flatpak
 - `htop`
 - `nvtop`
-- `yelp`
-
-### TBA - Packages
-- `btop`
-- `kitty`, my preferred terminal
+- Gnomies I don't use: `gnome-software-rpm-ostree`, `gnome-tour`, `gnome-terminal`, `gnome-terminal-nautilus`, and `yelp`
+- GNOME Classic: `gnome-classic-session`, `gnome-classic-session-xsession`
 
 ## T480/s packages
 The following packages are installed by default for improving Lenovo T480/s power management, performance, and features:
@@ -67,10 +66,13 @@ The following packages are explicitly removed from the base image due to conflic
 `tlp.service` is enabled by default. `systemd-rfkill.{service,socket}` is disabled by default. Eventually, I would like to enable `python-validity`, `throttled` and `zcfan` services by default as well if possible.
 
 ## Automatic updates
-At the moment, automatic updates follow BlueBuild defaults. Eventually, I would like to set `rpm-ostreed-automatic.{timer,service}` to 17:30~18:30 UTC by default.
+`rpm-ostreed-automatic.timer` is set to 17:45 UTC.
 
 ## Flatpak
 The following apps are installed as *system* Flatpaks by default.
+
+> Eventually Flatpaks in `default-flatpaks.yml` will be stripped down to just the bare necessities and I will be using either `yafti` or custom `just`s instead.
+
 - BoxBuddy
 - Clapper
 - ExtensionManager
@@ -97,21 +99,13 @@ The following apps are installed as *user* Flatpaks by default.
 - Webcord
 
 ### TBA - System Flatpaks
-- Celluloid
 - Evolution
-- ✅ File Roller
 - GNOME Calendar
-- ✅ GNOME Camera (Snapshot)
-- ✅ GNOME Web (Epiphany) 
-- ✅ GNOME Weather
-- ✅ Kooha
-- ✅ Main Menu (Libre Menu Editor)
 
 ### TBA - User Flatpaks
 - Bitwarden
 - Flameshot
 - Fragments
-- ✅ QuodLibet
 - Spotify
 
 > Alternatively, the apps above will be available for installation via `yafti`.
@@ -131,7 +125,7 @@ The following extensions are explicitly installed via `gnome-extensions` module.
 
 # Installation
 
-> Do at your own risk. This build is a heavy work in progress and ~~even I don't use it on bare metal~~ I do use it, but I guarantee nothing. Changes, especially to `recipes/`, will be frequent.
+> Do at your own risk. This build is a heavy work in progress and ~~even I don't use it on bare metal~~ I do use it on my personal/work/production device, but I guarantee nothing. Changes, especially to `recipes/`, will be frequent.
 
 This build works alright but it's still loose in a lot of places.
 

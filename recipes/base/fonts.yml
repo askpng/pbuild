@@ -1,14 +1,12 @@
 type: fonts
 fonts:
   nerd-fonts:
-    #don't add spaces or "Nerd Font" suffix.
+    #remember to not add spaces or Nerd Fonts suffix!
     - JetBrainsMono
     - NerdFontsSymbolsOnly
   google-fonts:
-    #- DotGothic16
     #- Inter
     - Martian Mono
     - Ruda
     - PT Sans
     - Fira Sans
-    #- Overpass Mono
