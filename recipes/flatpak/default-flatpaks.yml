@@ -26,7 +26,7 @@ system:
     - org.gnome.Weather
     #- org.mozilla.firefox
     #- page.codeberg.libre_menu_editor.LibreMenuEditor
-    #- re.sonny.Junction
+    - re.sonny.Junction
 
 #user:
   #repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
