@@ -1,3 +1,5 @@
+## This image is no longer being worked on and built. Check out [solarpowered](https://github.com/askpng/solarpowered) instead.
+
 # pbuild
 [![build-ublue](https://github.com/askpng/pbuild/actions/workflows/build.yml/badge.svg)](https://github.com/askpng/pbuild/actions/workflows/build.yml)
 
@@ -107,18 +109,6 @@ The following apps are installed as *user* Flatpaks by default.
 - TextPieces
 - Webcord
 
-### TBA - System Flatpaks
-- Evolution
-- GNOME Calendar
-
-### TBA - User Flatpaks
-- Bitwarden
-- Flameshot
-- Fragments
-- Spotify
-
-> Alternatively, the apps above will be available for installation via `yafti`.
-
 ## Gnome Extensions
 The following extensions are explicitly installed via `gnome-extensions` module. Eventually will be replaced with GSettings schemas. 
 - Alphabetical App Grid
@@ -132,55 +122,3 @@ The following extensions are explicitly installed via `gnome-extensions` module.
 - Night Theme Switcher
 - QSTweak
 
-# Installation
-
-> Do at your own risk. This build is a heavy work in progress and ~~even I don't use it on bare metal~~ I do use it on my personal/work/production device, but I guarantee nothing. Changes, especially to `recipes/`, will be frequent.
-
-This build works alright but it's still loose in a lot of places.
-
-If you managed to even get here and read this far, first of all, why? Second of all, maybe you shouldn't, but if you insist, do try out and help me make this a better build (please).
-
-## Rebase
-To rebase from a Silverblue installation, follow the steps below.
-1. Rebase to the unsigned image to get the proper signing keys + policies installed and reboot:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/askpng/pbuild:latest --reboot
-  ```
-2. Rebase to the signed image and reboot:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/askpng/pbuild:latest --reboot
-  ```
-
-## ISO
-ISO file for a fresh install can be generated using `docker` or `podman` from a Silverblue system.
-
-### Via Docker
-```
-mkdir ./iso-output
-sudo docker run --rm --privileged --volume ./iso-output:/build-container-installer/build --pull=always \
-ghcr.io/jasonn3/build-container-installer:latest \
-IMAGE_REPO=ghcr.io/askpng \
-IMAGE_NAME=pbuild \
-IMAGE_TAG=latest \
-VARIANT=Silverblue
-```
-
-### Via Podman
-```
-mkdir ./iso-output
-sudo podman run --rm --privileged --volume ./iso-output:/build-container-installer/build --security-opt label=disable --pull=newer \
-ghcr.io/jasonn3/build-container-installer:latest \
-IMAGE_REPO=ghcr.io/askpng \
-IMAGE_NAME=pbuild \
-IMAGE_TAG=latest \
-VARIANT=Silverblue
-```
-
-## Verification
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign).
-
-### Verify `cosign.pub`
-
-```bash
-cosign verify --key cosign.pub ghcr.io/askpng/pbuild
-```

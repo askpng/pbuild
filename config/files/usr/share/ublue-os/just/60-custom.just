@@ -1,5 +1,5 @@
 # set kernel parameters for sysrq, thinkpad fan control, and i915 guc-fbc
-set-kargs:
+t480s-set-kargs:
     rpm-ostree kargs \
       --append-if-missing="sysrq_always_enabled=1" \
       --append-if-missing="thinkpad_acpi.fan_control=1" \
@@ -15,7 +15,7 @@ install-user-flatpaks:
      com.vscodium.codium \
 
 # enable auto update for distroboxes
-distrobox-auto-update:
+set-distrobox-auto-update:
      systemctl enable --user distrobox-auto-update.{timer,service}
 
 # install arch, debian, bluebuild-cli distroboxes
@@ -24,7 +24,7 @@ premature-set-containers:
      distrobox assemble create
 
 # set junction as default for browsers
-set-junction:
+set-junction-browser:
      xdg-settings set default-web-browser re.sonny.Junction.desktop
 
 # install flameshot and grant screenshot permission
@@ -33,7 +33,7 @@ set-flameshot:
 
 # set python3-validity
 # NEEDS VALIDATION (lol)
-premature-set-fingerprint-sensor:
+premature-t480s-set-fingerprint-sensor:
      sudo systemctl start python3-validity.service \
      sudo systemctl start open-fprintd.service \
      sudo systemctl enable open-fprintd-resume.service open-fprintd-suspend.service open-fprintd.service python3-validity.service \
