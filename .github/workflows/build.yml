@@ -1,7 +1,8 @@
 name: bluebuild
 on:
   schedule:
-    - cron: "30 17 * * *" # build at 18:00 UTC every day
+    #reschedule for observation purposes - shifted to solarpowered
+    - cron: "30 17 1,11,21 * *" # build at 17:30 UTC every first, 11th, and 21st days
   push:
     paths:
       - "recipes/recipe.yml" # trigger build only when recipe.yml is updated
